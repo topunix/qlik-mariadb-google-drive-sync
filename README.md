@@ -11,14 +11,14 @@ This repository contains a Python script designed to facilitate data synchroniza
 The script follows a three-step workflow:
 
 1. **Delete Old Dump:**
-   - Checks for an existing file named 'alfred-dump.xml' on Google Drive.
+   - Checks for an existing file named 'my-dump.xml' on Google Drive.
    - If found, deletes the old dump file.
 
 2. **Upload New Dump:**
-   - Uploads a new version of the 'alfred-dump.xml' file to Google Drive using the Google Drive API.
+   - Uploads a new version of the 'my-dump.xml' file to Google Drive using the Google Drive API.
 
 3. **Delete Local Dump:**
-   - Deletes the local copy of the 'alfred-dump.xml' file from the machine.
+   - Deletes the local copy of the 'my-dump.xml' file from the machine.
 
 ## Requirements
 
