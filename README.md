@@ -4,6 +4,8 @@
 
 This repository contains a Python script designed to facilitate data synchronization from a MariaDB database to Qlik Sense using Google Drive as an intermediary storage. Due to Qlik Sense's limitation in connecting directly to MariaDB, this script provides a workaround by creating a database dump in XML format, uploading it to Google Drive, and allowing Qlik Sense to read from the file stored in Google Drive.
 
+**UPDATE: December 2023.** All ODBC data sources, except ServiceNow, are now supported with Qlik Data Gateway - Direct Access.
+
 ## Workflow
 
 The script follows a three-step workflow:
