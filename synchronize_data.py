@@ -12,6 +12,9 @@ credentials = ServiceAccountCredentials.from_json_keyfile_name('client_cred.json
 
 service = build('drive', 'v3', credentials=credentials)
 
+# Replace 'YOUR_FOLDER_ID' with the actual ID of the parent folder in Google Drive:
+parent_folder_id = 'YOUR_FOLDER_ID'
+
 # delete the old dump in the google drive
 results = service.files().list(
     pageSize=5, fields="nextPageToken, files(id, name, mimeType, size, parents, modifiedTime)").execute()
@@ -26,7 +29,7 @@ for item in items:
         print(del_response)
 
 # upload file to server
-file_metadata = { 'name' : 'my-dump.xml','parents': ['1-3dgfYUVfh5IClqMq6tV-HGiRFqahlta']}
+file_metadata = { 'name' : 'my-dump.xml','parents': [parent_folder_id]}
 media = MediaFileUpload('my-dump.xml',mimetype='text/xml')
 file = service.files().create(body=file_metadata, media_body=media, fields='id').execute()
 
