@@ -25,6 +25,9 @@ The script follows a three-step workflow:
 - **Service Account Credentials:**
   - A JSON key file for a service account with appropriate permissions to access Google Drive. This file should be named 'client_cred.json' and placed in the same directory as the script.
 
+- **Parent Folder ID:**
+  - Replace the placeholder in the script with the actual ID of the parent folder in Google Drive where you want to store the database dump. You can obtain the folder ID by right-clicking on the folder in Google Drive and selecting "Share." The ID will be in the URL as `https://drive.google.com/drive/folders/YOUR_FOLDER_ID`.
+
 - **Python Libraries:**
   - Ensure the following Python libraries are installed:
     - `oauth2client`
